@@ -24,7 +24,6 @@ export default function App() {
 	if (!fontsLoaded) {
 		return <AppLoading />;
 	}
-	//
 
 	function pickedNumberHandler(pickedNumber) {
 		// console.log(pickedNumber, "pickedNumber");
