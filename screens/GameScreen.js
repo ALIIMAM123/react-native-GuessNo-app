@@ -1,6 +1,13 @@
 import { useState, useEffect } from "react";
 
-import { StyleSheet, View, Text, Alert, FlatList } from "react-native";
+import {
+	StyleSheet,
+	View,
+	Text,
+	Alert,
+	FlatList,
+	Dimensions,
+} from "react-native";
 import NumberContainer from "../components/game/NumberContainer";
 import Card from "../components/UI/Card";
 import InstructionText from "../components/UI/InstructionText";
@@ -123,10 +130,15 @@ function GameScreen({ userNumber, onGameOver }) {
 
 export default GameScreen;
 
+const deviceWidth = Dimensions.get("window");
+
 const styles = StyleSheet.create({
 	screen: {
 		flex: 1,
-		padding: 40,
+		// padding: 40,
+		padding: deviceWidth < 375 ? 25 : 10,
+		marginTop: deviceWidth < 375 ? 25 : 30,
+		alignItems: "center",
 	},
 	title: {
 		fontSize: 18,

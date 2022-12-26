@@ -26,5 +26,8 @@ const styles = StyleSheet.create({
 		padding: 4,
 		textAlign: "center",
 		marginTop: 16,
+		// maxWidth: "80%",
+		maxWidth: "80%",
+		width: 300,
 	},
 });

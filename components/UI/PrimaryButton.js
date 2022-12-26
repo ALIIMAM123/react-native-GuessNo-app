@@ -1,4 +1,4 @@
-import { View, Text, Pressable, StyleSheet } from "react-native";
+import { View, Text, Pressable, StyleSheet, Dimensions } from "react-native";
 
 function PrimaryButton({ children, onPress }) {
 	// function pressHandler() {
@@ -23,11 +23,15 @@ function PrimaryButton({ children, onPress }) {
 
 export default PrimaryButton;
 
+const deviceWidth = Dimensions.get("window").width;
+
 const styles = StyleSheet.create({
 	buttonOutercontainer: {
 		borderRadius: 28,
 		overflow: "hidden",
-		margin: 5,
+		margin: 4,
+		// maxWidth: "100%",
+		backgroundColor: "red",
 	},
 
 	buttonInnercontainer: {
@@ -39,7 +43,6 @@ const styles = StyleSheet.create({
 	buttonText: {
 		color: "white",
 		textAlign: "center",
-
-		fontSize: 20,
+		fontSize: deviceWidth < 375 ? 14 : 12,
 	},
 });
